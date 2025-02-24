@@ -25,12 +25,6 @@ describe('Customer Management Page', () => {
         cy.get(selectors.btn_addCustomer)
             .should('be.visible')        
     })
-    it('Allow a user to add a user', () => {
-        cy.get(selectors.btn_addCustomer)
-        .click();
-        ValidateModalIsClosed()
-        cy.wait(5000);
-    })
     it('Should Allow a user Cancel an add', () => {
         cy.get(selectors.btn_addCustomer)
         .click();

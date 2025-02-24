@@ -8,4 +8,5 @@ export interface CustomerData {
     state: string;
     zip: string;
     notes?: string;
+    id?: number;
   }

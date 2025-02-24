@@ -21,10 +21,16 @@ import { CustomerProvider } from "./CustomerProvider";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
-
+  const handleReload = () => {
+    window.location.reload();
+  };
    function handleModalToggle(): void {
+
     setModalOpen((previous) => {
       console.log("open", previous, !previous);
+      if(previous) {
+        handleReload();
+      }
       return !modalOpen;
     });
   }
