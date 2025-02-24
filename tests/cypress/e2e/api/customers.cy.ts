@@ -9,7 +9,7 @@ describe('Customer Management Page', () => {
             expect(repo.length).to.greaterThan(1);
         });
     })  
-    it.skip('Get User by ID', () => {
+    it('Get User by ID', () => {
         
         cy.wrap(null).then(async () => {  
             let newCustomer: CustomerData = ({
@@ -43,7 +43,7 @@ describe('Customer Management Page', () => {
             });
         })
     })  
-    it.skip('Add Users', () => {
+    it('Add Users', () => {
         let newCustomer: CustomerData = ({
             firstName : "Kayeln",
             lastName : "Kayeln",
