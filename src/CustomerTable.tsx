@@ -88,6 +88,7 @@ function CustomerTable() {
             <th className="header-cell">State</th>
             <th className="header-cell">Zip Code</th>
             <th className="header-cell">Notes</th>
+            <th className="header-cell">Actions</th>
           </tr>
         </thead>
         <tbody className="table-body">
