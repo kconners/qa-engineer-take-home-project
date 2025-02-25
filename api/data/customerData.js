@@ -41,6 +41,10 @@ const getCustomerById = (request, response) => {
 
 const deleteCustomer = (request, response) => {
     const foundCustomer = customers.findIndex((customer) => customer.id == request.params.customerId)
+
+    if(foundCustomer == -1) {
+        response.status(404).json()
+    }
     customers.splice(foundCustomer, 1);
     response.status(200).json()
  }
@@ -68,8 +72,6 @@ const addCustomers = (request, response) => {
 const updateCustomer = (request, response) => {
     const foundCustomer = customers.find((customer) => customer.id == request.params.customerId)
 
-console.log(JSON.stringify(foundCustomer))
-
     foundCustomer.firstName = request.body.firstName
     foundCustomer.lastName = request.body.lastName
     foundCustomer.email = request.body.email
@@ -79,8 +81,6 @@ console.log(JSON.stringify(foundCustomer))
     foundCustomer.state = request.body.state
     foundCustomer.zip = request.body.zip
     foundCustomer.notes = request.body.notes ?? ""
-
-console.log(JSON.stringify(foundCustomer))
 
     response.status(201).json(foundCustomer)
 }

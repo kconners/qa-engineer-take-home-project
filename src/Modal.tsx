@@ -13,7 +13,6 @@ interface CustomerModalProps {
 // TODO: Update modal to handle header? Or perhaps we just leave it to the user.... idk yet
 
 const CustomerModal: React.FC<CustomerModalProps> = ({ onClose, children, editCustomer}) => {
-  console.log({editCustomer})
   if(editCustomer == undefined ||editCustomer === "")
   {
   return (
